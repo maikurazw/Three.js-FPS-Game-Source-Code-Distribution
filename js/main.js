@@ -1,5 +1,5 @@
-// 🌍 1. インターネット上の公式ファイルを直接インポートする（URLの末尾まで全て必要です）
-import * as THREE from ''three';';
+// 🌍 1. インターネット上の公式ファイルを直接インポート（URLの最後まで全て必要です）
+import * as THREE from 'https://cloudflare.com';
 
 // 2. シーン（世界）を作成
 const scene = new THREE.Scene();
