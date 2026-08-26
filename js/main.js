@@ -1,17 +1,17 @@
-// 1. ライブラリの読み込み
-import * as THREE from '../lib/three.module.js';
+// 🌍 1. インターネット上の公式ファイルを直接インポートする（修正ポイント！）
+import * as THREE from 'https://unpkg.com';
 
 // 2. シーン（世界）を作成
 const scene = new THREE.Scene();
 
 // 3. カメラ（視点）を作成
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.z = 3; // カメラを手前に引く
+camera.position.z = 3;
 
 // 4. レンダラー（映写機）を作成してHTMLのcanvasと紐付ける
 const renderer = new THREE.WebGLRenderer({
     canvas: document.querySelector('#myCanvas'),
-    antialias: true // ギザギザを滑らかにする設定
+    antialias: true
 });
 renderer.setSize(window.innerWidth, window.innerHeight);
 
@@ -21,13 +21,12 @@ light.position.set(1, 1, 1).normalize();
 scene.add(light);
 
 // 6. メッシュ（表示する物）を作成
-// 箱の「形（ジオメトリ）」と「質感（マテリアル）」を作って合体させる
 const geometry = new THREE.BoxGeometry(1, 1, 1);
-const material = new THREE.MeshStandardMaterial({ color: 0x00ff88 }); // 緑色のツルツルした質感
+const material = new THREE.MeshStandardMaterial({ color: 0x00ff88 }); // 緑色の立方体
 const cube = new THREE.Mesh(geometry, material);
-scene.add(cube); // 世界に箱を追加
+scene.add(cube);
 
-// 7. アニメーション関数（1秒間に60回実行されて画面を更新する）
+// 7. アニメーション関数
 function animate() {
     requestAnimationFrame(animate);
 
@@ -35,7 +34,6 @@ function animate() {
     cube.rotation.x += 0.01;
     cube.rotation.y += 0.01;
 
-    // 描画する
     renderer.render(scene, camera);
 }
 
