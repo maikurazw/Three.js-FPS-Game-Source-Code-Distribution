@@ -1,5 +1,6 @@
 // 🌍 ここだけを正しいURLに書き換えます（1行目）
-import * as THREE from 'https://esm.sh';
+import * as THREE from 'three';
+
 
 // 2行目以降（シーン、カメラ、ライト、立方体の作成など）はそのまま残す
 const scene = new THREE.Scene();
