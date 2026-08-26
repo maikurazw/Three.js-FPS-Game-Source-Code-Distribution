@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Three.js FPS Game</title>
-    <!-- 💡 ここで「three」のURLを安全に指定します。これで削れなくなります！ -->
+    <!-- 💡 ここで「three」のURLを安全に指定します -->
     <script type="importmap">
       {
         "imports": {
@@ -19,6 +19,8 @@
 </head>
 <body>
     <canvas id="myCanvas"></canvas>
-    <script type="module" src="./js/main.js"></script>
+
+    <!-- ⚠️ キャッシュを完全に破壊するために、バージョンを「?v=999」に強制変更します！ -->
+    <script type="module" src="./js/main.js?v=999"></script>
 </body>
 </html>
