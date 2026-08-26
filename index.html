@@ -2,11 +2,18 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Three.js はじめての3D</title>
+    <title>Three.js FPS Game</title>
+    <!-- インポートマップ設定 (CDNのURLは最新の安全なものに変更) -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cloudflare.com"
+        }
+      }
+    </script>
     <style>
-        body { margin: 0; overflow: hidden; background-color: #000; }
-        canvas { display: block; width: 100vw; height: 100vh; }
+        body { margin: 0; overflow: hidden; }
+        canvas { display: block; }
     </style>
 </head>
 <body>
