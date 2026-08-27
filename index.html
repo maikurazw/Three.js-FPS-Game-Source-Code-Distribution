@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Three.js FPS Game</title>
-    <!-- 💡 ここで「three」のURLを安全に指定します -->
+    <title>Three.js(FPSGame)</title>
+    <!-- 💡 正しい Three.js (ES Module) の CDN URL を指定します -->
     <script type="importmap">
       {
         "imports": {
-          "three": "https://cloudflare.com"
+          "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
         }
       }
     </script>
@@ -19,8 +20,6 @@
 </head>
 <body>
     <canvas id="myCanvas"></canvas>
-
-    <!-- ⚠️ キャッシュを完全に破壊するために、バージョンを「?v=999」に強制変更します！ -->
-    <script type="module" src="./js/main.js?v=999"></script>
+    <script type="module" src="./js/main.js?v=abc"></script>
 </body>
 </html>
