@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Three.js(FPSGame)</title>
-    <!-- 💡 正しい Three.js (ES Module) の CDN URL を指定します -->
+    
+    <!-- 💡 ネットのローダーを消して、一番シンプルでエラーの起きないimportmapに戻しました -->
     <script type="importmap">
       {
         "imports": {
@@ -13,6 +14,7 @@
         }
       }
     </script>
+    
     <style>
         body { margin: 0; overflow: hidden; background-color: #000; }
         canvas { display: block; width: 100vw; height: 100vh; }
@@ -20,6 +22,14 @@
 </head>
 <body>
     <canvas id="myCanvas"></canvas>
-    <script type="module" src="./js/main.js?v=abc"></script>
+    
+    <!-- 💡 【追加】画面の真ん中に出る「＋（照準）」マークです -->
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #00ff00; font-family: sans-serif; font-size: 24px; pointer-events: none; font-weight: bold;">+</div>
+
+    <!-- 画面の下にX, Y, Zを表示するための文字の箱 -->
+    <div id="coords" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); color: #00ff00; font-family: monospace; font-size: 20px; background: rgba(0,0,0,0.7); padding: 5px 15px; border-radius: 5px; pointer-events: none;">X: 0.00 | Y: 0.00 | Z: 0.00</div>
+
+    <!-- 新しいキャッシュ対策の文字をつけて読み込みます -->
+    <script type="module" src="./js/main.js?v=importmap_aim_123"></script>
 </body>
 </html>
