@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Three.js(FPSGame)</title>
     
-    <!-- 💡 ネットのローダーを消して、一番シンプルでエラーの起きないimportmapに戻しました -->
+    <!-- 💡 GitHub Pagesでも絶対あだ名がバグらないように、完全なURLで登録します -->
     <script type="importmap">
       {
         "imports": {
-          "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
-          "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+          "three": "https://unpkg.com",
+          "three/addons/": "https://unpkg.com"
         }
       }
     </script>
@@ -23,13 +23,13 @@
 <body>
     <canvas id="myCanvas"></canvas>
     
-    <!-- 💡 【追加】画面の真ん中に出る「＋（照準）」マークです -->
+    <!-- 画面の真ん中に出る「＋（照準）」マーク -->
     <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #00ff00; font-family: sans-serif; font-size: 24px; pointer-events: none; font-weight: bold;">+</div>
 
     <!-- 画面の下にX, Y, Zを表示するための文字の箱 -->
     <div id="coords" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); color: #00ff00; font-family: monospace; font-size: 20px; background: rgba(0,0,0,0.7); padding: 5px 15px; border-radius: 5px; pointer-events: none;">X: 0.00 | Y: 0.00 | Z: 0.00</div>
 
-    <!-- 新しいキャッシュ対策の文字をつけて読み込みます -->
-    <script type="module" src="./js/main.js?v=github_light_test1"></script>
+    <!-- 💡 【重要】先頭の「 .（ドット）」を消して、フォルダ階層のバグを防ぎます。お尻の数字も最新にします -->
+    <script type="module" src="/js/main.js?v=gh_fixed_perfect_999"></script>
 </body>
 </html>
